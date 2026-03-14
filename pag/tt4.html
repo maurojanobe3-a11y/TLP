@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIº Trimestre - Galeria e Conteúdo</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      background-color: #f0f1f1;
+    }
+
+    /* Navegação */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1e293b;
+      color: white;
+      flex-wrap: wrap;
+    }
+
+    nav div a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: opacity 0.3s;
+    }
+
+    nav ul li a:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+
+ 
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+ 
+    .lista-section {
+      margin: 40px 0;
+    }
+
+    .lista-section h2 {
+      color: #0f172a;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    .lista-exemplo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .lista-card {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 8px;
+      flex: 1 1 250px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .lista-card h3 {
+      margin-bottom: 15px;
+      color: #1e293b;
+    }
+
+    .lista-card ul, .lista-card ol {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+
+    .lista-card dl {
+      margin-left: 10px;
+      line-height: 1.8;
+    }
+
+    .lista-card dt {
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .lista-card dd {
+      margin-left: 20px;
+      color: #334155;
+    }
+
+ 
+    .tabela-section {
+      margin: 40px 0;
+    }
+
+    .tabela-section h2 {
+      color: #0f172a;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    .tabela-estilizada {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .tabela-estilizada th {
+      background-color: #1e293b;
+      color: white;
+      font-weight: bold;
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    .tabela-estilizada td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .tabela-estilizada tbody tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .tabela-estilizada tbody tr:hover {
+      background-color: #e2e8f0;
+    }
+
+    .tabela-mesclada {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .tabela-mesclada th, .tabela-mesclada td {
+      border: 1px solid #cbd5e1;
+      padding: 12px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .tabela-mesclada th {
+      background-color: #1e293b;
+      color: white;
+    }
+
+    .destaque {
+      background-color: #d1d5db;
+      font-weight: bold;
+    }
+
+    .legenda {
+      margin-top: 10px;
+      font-style: italic;
+      color: #4b5563;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      border-radius: 0 0 12px 12px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 80%;
+      }
+
+      .conteudo-imagens {
+        flex-direction: column;
+      }
+
+      .lista-exemplo {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div><a href="../index.html">🏠 Home</a></div>
+  <ul>
+    <li><a href="trimestre1.html">← Iº Trimestre</a></li>
+    <li><a href="tt3.html">📁 Tarefa anterior</a></li>
+    <li><a href="tt5.html">📁 Próxima Tarefa</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+   
+  <section class="lista-section">
+    <h2>📋 Exemplos de Listas</h2>
+    <div class="lista-exemplo">
+    
+      <div class="lista-card">
+        <h3>Lista de Compras (não ordenada)</h3>
+        <ul>
+          <li>Arroz</li>
+          <li>Feijão</li>
+          <li>Macarrão</li>
+          <li>Legumes
+            <ul>
+              <li>Tomate</li>
+              <li>Cenoura</li>
+              <li>Batata</li>
+            </ul>
+          </li>
+          <li>Frutas</li>
+        </ul>
+      </div>
+
+ 
+      <div class="lista-card">
+        <h3>Passos para fazer um bolo (ordenada)</h3>
+        <ol>
+          <li>Preaquecer o forno a 180°C</li>
+          <li>Misturar os ingredientes secos</li>
+          <li>Adicionar os líquidos e mexer bem</li>
+          <li>Despejar na forma untada</li>
+          <li>Assar por 40 minutos</li>
+          <li>Deixar esfriar e servir</li>
+        </ol>
+      </div>
+
+    
+      <div class="lista-card">
+        <h3>Glossário (lista de definição)</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>Linguagem de marcação para criação de páginas web.</dd>
+          <dt>CSS</dt>
+          <dd>Linguagem de estilos para apresentação de documentos HTML.</dd>
+          <dt>JavaScript</dt>
+          <dd>Linguagem de programação que adiciona interatividade ao site.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section class="tabela-section">
+    <h2>📊 Tabelas Estilizadas</h2>
+
+ 
+    <h3 style="margin-bottom: 10px; color:#0f172a;">Tabela de Produtos</h3>
+    <table class="tabela-estilizada">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Estoque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Notebook</td><td>Eletrônicos</td><td>R$ 3.500,00</td><td>15</td></tr>
+        <tr><td>Smartphone</td><td>Eletrônicos</td><td>R$ 2.200,00</td><td>23</td></tr>
+        <tr><td>Mesa de escritório</td><td>Móveis</td><td>R$ 850,00</td><td>8</td></tr>
+        <tr><td>Cadeira ergonômica</td><td>Móveis</td><td>R$ 1.200,00</td><td>12</td></tr>
+      </tbody>
+    </table>
+
+ 
+    <h3 style="margin-bottom: 10px; color:#0f172a;">Horário de Aulas (com mesclagem)</h3>
+    <table class="tabela-mesclada">
+      <thead>
+        <tr>
+          <th>Horário</th>
+          <th>Segunda</th>
+          <th>Terça</th>
+          <th>Quarta</th>
+          <th>Quinta</th>
+          <th>Sexta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="destaque">08:00 - 09:00</td>
+          <td>Matemática</td>
+          <td>Português</td>
+          <td>História</td>
+          <td>Física</td>
+          <td>Química</td>
+        </tr>
+        <tr>
+          <td class="destaque">09:00 - 10:00</td>
+          <td>Matemática</td>
+          <td>Português</td>
+          <td>Geografia</td>
+          <td>Física</td>
+          <td>Química</td>
+        </tr>
+        <tr>
+          <td class="destaque">10:00 - 10:30</td>
+          <td colspan="5" style="background: #e2e8f0;">Intervalo</td>
+        </tr>
+        <tr>
+          <td class="destaque">10:30 - 11:30</td>
+          <td>Inglês</td>
+          <td>Educação Física</td>
+          <td rowspan="2">Biologia</td>
+          <td>Artes</td>
+          <td>Filosofia</td>
+        </tr>
+        <tr>
+          <td class="destaque">11:30 - 12:30</td>
+          <td>Inglês</td>
+          <td>Educação Física</td>
+          <td>Artes</td>
+          <td>Sociologia</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="legenda">* Tabela com uso de <strong>colspan</strong> (intervalo) e <strong>rowspan</strong> (Biologia ocupa duas linhas).</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 - IIº Trimestre • Galeria, Listas e Tabelas</p>
+  <p>Desenvolvido por Inória Reais</p>
+</footer>
+
+</body>
+</html>
