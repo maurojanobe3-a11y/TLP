@@ -1,27 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauro Janobe</title>
 
-        body{
-            background-color: rgb(211, 166, 107);
-        }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Georgia', serif;
+}
 
-        .cabeca{
-            background-color: aqua;
-            margin: 0%;
-        }
-    </style>
+body{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:30px 80px;
+font-size:20px;
+}
+
+nav ul{
+display:flex;
+gap:60px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:0.6;
+}
+
+.hero{
+display:flex;
+flex-direction:column;
+justify-content:center;
+height:80vh;
+padding-left:80px;
+}
+
+.small-text{
+font-size:26px;
+max-width:400px;
+margin-bottom:60px;
+}
+
+h1{
+font-size:90px;
+font-style:italic;
+max-width:800px;
+}
+
+.description{
+margin-top:60px;
+font-size:28px;
+max-width:600px;
+}
+
+.btn{
+margin-top:40px;
+padding:15px 50px;
+border:2px solid white;
+background:transparent;
+color:white;
+border-radius:40px;
+font-size:20px;
+cursor:pointer;
+transition:0.4s;
+}
+
+.btn:hover{
+background:white;
+color:black;
+}
+</style>
 </head>
+
 <body>
-    <header class="cabeca">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim libero alias molestias voluptates 
-        nihil iste, nisi voluptate placeat, aut fugiat quasi aperiam! Magnam optio cumque quo, laborum sit pariatur quis.
-    </header>
-   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda dolore similique, id recusandae voluptatum
-     sit eum nostrum. Est voluptas vitae cupiditate nesciunt autem et reiciendis ut incidunt delectus, voluptate numquam.</p> 
+
+<nav>
+<div>Home 🏠</div>
+
+<ul>
+<li><a href="pag/trimei.html">I trimestre</a></li>
+<li><a href="pag/trimeii.html">II trimestre</a></li>
+<li><a href="pag/trimeiii.html">III trimestre</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<div class="small-text">
+site de técnicas de linguagem de programação
+</div>
+
+<h1>Olá sejam<br>bem-vindo</h1>
+
+<div class="description">
+Vê cada trimestre para saber o meu desempenho em cada trimestre.
+</div>
+
+<button class="btn">Fim</button>
+
+</section>
+
 </body>
 </html>
